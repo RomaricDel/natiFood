@@ -8,6 +8,7 @@
         <?php
            echo "zrjvbzlrjbverljbnerlj";
            echo "batard !";
+           echo "allez c'est bon vas y là !";
         ?>
     </body>
 </html>
