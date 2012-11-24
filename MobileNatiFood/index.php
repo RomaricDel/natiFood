@@ -7,6 +7,7 @@
     <body>
         <?php
            echo "zrjvbzlrjbverljbnerlj";
+           echo "batard !";
         ?>
     </body>
 </html>
