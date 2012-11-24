@@ -1,72 +1,63 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-	<title>My Page</title> 
+	<title>NatiFood</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 </head> 
 <body> 
-	<div id="firstpage" data-role="page">
+	<div id="home" data-role="page">
 		<div data-role="header">
-			<a href="#firstpage" data-role="button" data-icon="home" data-iconpos="notext"></a>
-			<h1>Home</h1>
-			<a href="#firstpage" data-role="button" data-icon="back" data-iconpos="notext"></a>
+			<h1>NatiFood</h1>
+			<a href="#info"
+				data-icon="info"
+				data-iconpos="notext"
+				data-rel="dialog"
+				class="ui-btn-right"
+			>Info</a>
 		</div>
 		<div data-role="controlgroup">
-		<a href="#blog" 
+		<a href="news.html" 
 			data-transition="flip"
 			data-role="button"
-			data-icon="arrow-r">Blog</a>
-		<a href="#videos" 
+			data-icon="arrow-r">News</a>
+		<a href="farmers.html" 
 			data-transition="flip"
 			data-role="button"
-			data-icon="arrow-r">Videos</a>
-		<a href="#photos" 
+			data-icon="arrow-r">Farmers</a>
+		<a href="food.html" 
+			data-transition="flip"
+			data-role="button"
+			data-icon="arrow-r">Food</a>
+                    <a href="photos.html" 
 			data-transition="flip"
 			data-role="button"
 			data-icon="arrow-r">Photos</a>
-                    <a href="#photos" 
+		<a href="videos.html" 
 			data-transition="flip"
 			data-role="button"
-			data-icon="arrow-r">test</a>
-		<a href="#tweets" 
-			data-transition="flip"
-			data-role="button"
-			data-icon="arrow-r">Tweet</a>
+			data-icon="arrow-r">Videos</a>
 		</div>
-		<div data-role="footer" data-position="fixed">
-			<nav data-role="navbar">
-			<ul>
-				<li><a href="#firstpage" data-role="button" data-icon="home">Home</a></li>
-				<li><a href="#secondpage" data-role="button" data-icon="info">News </a></li>
-				<li><a href="#thirdpage" data-role="button" data-icon="star">Favoris </a></li>
-			</ul>
-			</nav>
-		</div>
-	</div>
+        </div>
 
-	
-	<div id="secondpage" data-role="page">
+	<div data-role="page" id="info">
+        <!-- Informations about NatiFood in a pop up window-->
+        
 		<div data-role="header">
-			<a href="#firstpage" data-role="button" data-icon="home" data-iconpos="notext"></a>
-			<h1>News</h1>
-			<a href="#firstpage" data-role="button" data-icon="back" data-iconpos="notext"></a>
+			<h1>About NatiFood</h1>
 		</div>
-		<h3>Page 2</h3>
-		<p>edfsdfdsf dsfsdfdsfdsf dsfsdfsdfsd sdfsfsdf <br /> dsfsdfdfdfe</p>
-		<div data-role="footer" data-position="fixed">
-			<nav data-role="navbar">
-			<ul>
-				<li><a href="#firstpage" data-role="button" data-icon="home">Home</a></li>
-				<li><a href="#secondpage" data-role="button" data-icon="info">News </a></li>
-				<li><a href="#thirdpage" data-role="button" data-icon="star">Favoris </a></li>
-			</ul>
-			</nav>
+
+		<div data-role="content">
+			<p>
+                            NatiFood is a non-profit corporation, which list all food producers which want to sell food. 
+                        </p>
+                        <p>
+                            The particularity of NatiFood is that all which is listed here has been product in your region.
+                            It avoid the product to have long transport from on far country, and improve the quality of the food. 
+                        </p>
 		</div>
 	</div>
-
-
 </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>News</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+</head> 
+<body> 
+	<div id="news" data-role="page">
+		<div data-role="header">
+                    	<h1>News</h1>
+			<a href="#firstpage" data-role="button" data-icon="home" data-iconpos="notext"></a>
+		</div>
+		<div data-role="controlgroup">
+		<a href="news.html" 
+			data-transition="flip"
+			data-role="button"
+			data-icon="arrow-r">News</a>
+		<a href="farmers.html" 
+			data-transition="flip"
+			data-role="button"
+			data-icon="arrow-r">Farmers</a>
+		</div>
+            	
+		<div data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+			<ul>
+				<li><a href="farmers.html" data-role="button" data-icon="home">Farmers</a></li>
+				<li><a href="food.html" data-role="button" data-icon="info">Food</a></li>
+				<li><a href="photos.html" data-role="button" data-icon="star">Photos</a></li>
+                                <li><a href="videos.html" data-role="button" data-icon="star">Videos</a></li>
+			</ul>
+			</nav>
+		</div>
+	</div>
+</body>
+</html>
