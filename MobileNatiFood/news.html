@@ -1,39 +1,70 @@
 <!DOCTYPE html> 
 <html> 
-<head> 
-	<title>News</title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-	<script src="js/jquery-1.8.3.min"></script>
-	<script src="js/jquery.mobile-1.2.0.min"></script>
-</head> 
-<body> 
-	<div id="news" data-role="page">
-		<div data-role="header">
-                    	<h1>News</h1>
-			<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext"></a>
-		</div>
-		<div data-role="controlgroup">
-		<a href="news.html" 
-			data-transition="flip"
-			data-role="button"
-			data-icon="arrow-r">News</a>
-		<a href="farmers.html" 
-			data-transition="flip"
-			data-role="button"
-			data-icon="arrow-r">Farmers</a>
-		</div>
-            	
-		<div data-role="footer" data-position="fixed">
-			<nav data-role="navbar">
-			<ul>
-				<li><a href="farmers.html" data-role="button" data-icon="star">Farmers</a></li>
-				<li><a href="food.html" data-role="button" data-icon="star">Food</a></li>
-				<li><a href="photos.html" data-role="button" data-icon="star">Photos</a></li>
-                                <li><a href="videos.html" data-role="button" data-icon="star">Videos</a></li>
-			</ul>
-			</nav>
-		</div>
-	</div>
-</body>
+    <head> 
+        <title>News</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <script src="js/jquery-1.8.3.min"></script>
+        <script src="js/jquery.mobile-1.2.0.min"></script>
+        <script src="js/feed_news.js"></script>
+        
+    </head> 
+    <body> 
+        <div id="news" data-role="page">
+            
+            <div data-role="header">
+                <h1>News</h1>
+                <a href="index.html"
+                   data-icon="back"
+                   data-iconpos="notext"
+                   class="ui-btn-right"
+                   >Back</a>
+            </div>
+            <div data-role="collapsible-set"
+                 id="newslist">
+            </div>
+            <div data-role="footer"
+                 data-position="fixed"
+                 data-id="vs_footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="farmers.html" 
+                               data-role="button"
+                               data-icon="star"
+                               >Farmers</a></li>
+                        <li><a href="food.html" 
+                               data-role="button"
+                               data-icon="star"
+                               >Food</a></li>
+                        <li><a href="photos.html" 
+                               data-role="button"
+                               data-icon="star"
+                               >Photos</a></li>
+                        <li><a href="videos.html" 
+                               data-role="button"
+                               data-icon="star"
+                               >Videos</a></li>
+                    </ul>
+                </div><!-- navbar -->
+            </div>
+            
+        </div>
+        
+	<div id="blogpost"
+		data-role="page">
+		<div data-role="header"
+			data-position="fixed"
+			data-theme="a">
+			<a href="#news"
+				data-icon="back"
+				data-iconpos="notext"
+				data-direction="reverse">Videos</a>
+			<h1>Post</h1>
+		</div><!-- header-->
+		<div data-role="content">
+			<div id="mypost"></div>
+		</div><!-- content -->
+	</div><!-- page -->
+        <script src="http://www.nplancher.info/natifood/blog?json=recentstories&callback=listPosts" type="text/javascript"></script>
+    </body>
 </html>
