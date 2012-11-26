@@ -1,0 +1,132 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Balbriggan Farmers</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/jquery.mobile-1.2.0.min.js"></script>
+        <script src="js/feed_news.js"></script>
+        
+    </head> 
+    <body> 
+        <div id="farmers" data-role="page">
+            
+            <div data-role="header">
+                <h1>Farmers</h1>
+                <a href="farmers.html"
+                   data-icon="back"
+                   data-iconpos="notext"
+                   class="ui-btn-left"
+                   >Back</a>
+                 <a href="index.html"
+                   data-icon="home"
+                   data-iconpos="notext"
+                   class="ui-btn-right"
+                   >Home</a>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-split-icon="gear" class="ui-listview" data-filter="true">
+			<li>
+                                <a href="balbriggan.html">
+                                <h2>Arnold Hensman</h2>
+                                <img src="images/arnoldhensman.jpg" alt="View Source logo" />
+				<p>Tel. : </p>
+                                <p>*******</p>
+                                </a>				
+                                <a href="#info-Arnold" data-icon="info" data-iconpos="notext" data-rel="dialog" class="ui-btn-right">Informations</a>
+			</li>
+                        <li>
+                                <a href="balbriggan.html">
+                                <h2>Nans Plancher</h2>
+				<img src="images/nansplancher.jpg" alt="View Source logo" />
+                                <p>Tel. : </p>
+                                <p>*******</p>
+                                </a>
+				<a href="#info-Nans" data-icon="info" data-iconpos="notext" data-rel="dialog" class="ui-btn-right">Informations</a>				
+			</li>
+                </ul>                
+            </div>
+            <div data-role="footer"
+                 data-position="fixed"
+                 data-id="vs_footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="news.html" 
+                               data-role="button"
+                               data-icon="star"
+                               >News</a></li>
+                        <li><a href="food.html" 
+                               data-role="button"
+                               data-icon="star"
+                               >Food</a></li>
+                        <li><a href="photos.html" 
+                               data-role="button"
+                               data-icon="star"
+                               >Photos</a></li>
+                        <li><a href="videos.html" 
+                               data-role="button"
+                               data-icon="star"
+                               >Videos</a></li>
+                    </ul>
+                </div><!-- navbar -->
+            </div>
+            
+        </div>
+        
+        <div data-role="page" id="info-Arnold">
+        <!-- Informations about Patrick O'donell in a pop up window-->
+        
+		<div data-role="header">
+			<h1>Arnold Hensman</h1>
+		</div>
+
+		<div data-role="content">
+                    <h3>Personal Informations :</h3>
+                    <ul>
+                        <li>Name : Arnold Hensman</li>
+                        <li>Farm Status : Learning Farm</li>
+                        <li>Biologic Status : Yes</li>
+                        <li>Adress : Institute of Technology Blanchardstown, Blanchardstown Road North, Dublin 15 </li>
+                        <li>Tel. : </li>
+                        <li>Quality Mark : *************</li>
+                    </ul>
+                    <h3>He sell :</h3>
+                    <table>
+                        <tr><th>Food</th><th>Price</th><th>Type</th></tr>
+                        <tr><td>Chicken Wings</td><td>11E/KG</td><td>Meat</td></tr>
+                        <tr><td>Pork Sausages</td><td>7E/KG</td><td>Meat</td></tr>
+                        <tr><td>Potatoes</td><td>2E/KG</td><td>Vegetable</td></tr>
+                    </table>
+		</div>
+	</div>
+        
+        <div data-role="page" id="info-Nans">
+        <!-- Informations about Neil Mc Cormack in a pop up window-->
+        
+		<div data-role="header">
+			<h1>Nans Plancher</h1>
+		</div>
+
+		<div data-role="content">
+                    <h3>Personal Informations :</h3>
+                    <ul>
+                        <li>Name : Nans Plancher</li>
+                        <li>Farm Status : Learning Farmer</li>
+                        <li>Biologic Status : Yes</li>
+                        <li>Adress : Institute of Technology Blanchardstown, Blanchardstown Road North, Dublin 15</li>
+                        <li>Quality Mark : *************</li>
+                    </ul>
+                    <h3>He sell :</h3>
+                    <table>
+                        <tr><th>Food</th><th>Price</th><th>Type</th></tr>
+                        <tr><td>Blueberry</td><td>1E/KG</td><td>Fruit</td></tr>
+                        <tr><td>Apple</td><td>3E/KG</td><td>Fruit</td></tr>
+                        <tr><td>Chicken Wings</td><td>7E/KG</td><td>Meat</td></tr>
+                    </table>
+		</div>
+	</div>
+       
+       
+        </body>
+</html>
