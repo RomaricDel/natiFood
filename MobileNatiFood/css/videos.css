@@ -1,0 +1,14 @@
+#videolist img {
+	width: 90%;
+}
+#videoplayer iframe {
+	width: 100%;
+	min-height: 50%;
+}
+#videolist h3 {
+	margin: 15px 0 5px 0;
+	height: 35px;
+	overflow: hidden;
+	font-size: 1em;
+}
+
