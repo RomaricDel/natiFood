@@ -1,65 +1,127 @@
 <!DOCTYPE html> 
 <html> 
-<head> 
-	<title>NatiFood</title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-        <script src="js/jquery-1.8.3.min.js"></script>
-        <script src="js/jquery.mobile-1.2.0.min.js"></script>
-        <script src="js/feed_news.js"></script>
+    <title>NatiFood</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/feed_news.js"></script>
 </head> 
 <body> 
-	<div id="home" data-role="page">
-		<div data-role="header">
-			<h1>NatiFood</h1>
-			<a href="#info"
-				data-icon="info"
-				data-iconpos="notext"
-				data-rel="dialog"
-				class="ui-btn-right"
-			>Info</a>
-		</div>
-		<div data-role="controlgroup">
-		<a href="news.html" 
-			data-transition="flip"
-			data-role="button"
-			data-icon="arrow-r">News</a>
-		<a href="farmers.html" 
-			data-transition="flip"
-			data-role="button"
-			data-icon="arrow-r">Farmers</a>
-		<a href="food.html" 
-			data-transition="flip"
-			data-role="button"
-			data-icon="arrow-r">Food</a>
-                    <a href="photos.html" 
-			data-transition="flip"
-			data-role="button"
-			data-icon="arrow-r">Photos</a>
-		<a href="videos.html" 
-			data-transition="flip"
-			data-role="button"
-			data-icon="arrow-r">Videos</a>
-		</div>
+    
+    <!-- ################# Main Page ##################### -->
+    
+    <div id="home" data-role="page">
+        <div data-role="header">
+            <h1>NatiFood</h1>
+            <a href="#info"
+               data-icon="info"
+               data-iconpos="notext"
+               data-rel="dialog"
+               class="ui-btn-right"
+               >Info</a>
+        </div>
+        <div data-role="controlgroup">
+            <a href="#news" 
+               data-transition="flip"
+               data-role="button"
+               data-icon="arrow-r">News</a>
+            <a href="#farmers" 
+               data-transition="flip"
+               data-role="button"
+               data-icon="arrow-r">Farmers</a>
+            <a href="#farmers" 
+               data-transition="flip"
+               data-role="button"
+               data-icon="arrow-r">Food</a>
+            <a href="#photos" 
+               data-transition="flip"
+               data-role="button"
+               data-icon="arrow-r">Photos</a>
+            <a href="#videos" 
+               data-transition="flip"
+               data-role="button"
+               data-icon="arrow-r">Videos</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="info">
+        <!-- Informations about NatiFood in a pop up window-->
+
+        <div data-role="header">
+            <h1>About NatiFood</h1>
         </div>
 
-	<div data-role="page" id="info">
-        <!-- Informations about NatiFood in a pop up window-->
-        
-		<div data-role="header">
-			<h1>About NatiFood</h1>
-		</div>
+        <div data-role="content">
+            <p>
+                NatiFood is a non-profit corporation, which list all food producers which want to sell food. 
+            </p>
+            <p>
+                The particularity of NatiFood is that all which is listed here has been product in your region.
+                It avoid the product to have long transport from on far country, and improve the quality of the food. 
+            </p>
+        </div>
+    </div>
 
-		<div data-role="content">
-			<p>
-                            NatiFood is a non-profit corporation, which list all food producers which want to sell food. 
-                        </p>
-                        <p>
-                            The particularity of NatiFood is that all which is listed here has been product in your region.
-                            It avoid the product to have long transport from on far country, and improve the quality of the food. 
-                        </p>
-		</div>
-	</div>
-    
+    <!-- ################# News ##################### -->
+
+    <div id="news" data-role="page">
+
+        <div data-role="header">
+            <h1>News</h1>
+            <a href="#home"
+               data-icon="back"
+               data-iconpos="notext"
+               class="ui-btn-left"
+               >Back</a>
+        </div>
+        
+        <div data-role="collapsible-set"
+             id="newslist">
+        </div>
+        
+        <div data-role="footer"
+             data-position="fixed"
+             data-id="vs_footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#farmers" 
+                           data-role="button"
+                           data-icon="star"
+                           >Farmers</a></li>
+                    <li><a href="#food" 
+                           data-role="button"
+                           data-icon="star"
+                           >Food</a></li>
+                    <li><a href="#photos" 
+                           data-role="button"
+                           data-icon="star"
+                           >Photos</a></li>
+                    <li><a href="#videos" 
+                           data-role="button"
+                           data-icon="star"
+                           >Videos</a></li>
+                </ul>
+            </div><!-- navbar -->
+        </div>
+
+    </div>
+
+    <div id="blogpost"
+         data-role="page">
+        <div data-role="header"
+             data-position="fixed"
+             data-theme="a">
+            <a href="#news"
+               data-icon="back"
+               data-iconpos="notext"
+               data-direction="reverse">Videos</a>
+            <h1>Post</h1>
+        </div><!-- header-->
+        <div data-role="content">
+            <div id="mypost"></div>
+        </div><!-- content -->
+    </div>
+    <script src="http://www.nplancher.info/natifood/blog?json=recentstories&callback=listPosts" type="text/javascript"></script>
 </body>
 </html>
