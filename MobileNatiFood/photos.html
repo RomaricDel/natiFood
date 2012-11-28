@@ -1,14 +1,80 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8" />
+        <title>Photos</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/jquery.mobile-1.2.0.min.js"></script>
+
+        <script src="js/myscript.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
     </head>
     <body>
-        <div>TODO write content</div>
+        <!-- Page: Photos -->
+        <div id="photos"
+             data-role="page"
+             data-title="View Source: Photos">
+            <div data-role="header">
+                <h1>Photos</h1>
+                <a href="index.html"
+                   data-icon="back"
+                   data-iconpos="notext"
+                   class="ui-btn-left"
+                   >Back</a>
+            </div>
+
+            <div data-role="content">
+                <div class="ui-grid-c" id="photolist">
+                </div><!-- grid -->
+            </div><!-- content -->
+
+            <div data-role="footer"
+                 data-position="fixed"
+                 data-id="vs_footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="news.html" 
+                               data-role="button"
+                               data-icon="star"
+                               >Photos</a></li>
+                        <li><a href="farmers.html" 
+                               data-role="button"
+                               data-icon="star"
+                               >Farmers</a></li>
+                        <li><a href="food.html" 
+                               data-role="button"
+                               data-icon="star"
+                               >Food</a></li>
+                        <li><a href="videos.html" 
+                               data-role="button"
+                               data-icon="star"
+                               >Videos</a></li>
+                    </ul>
+                </div><!-- navbar -->
+            </div>
+        </div><!-- page -->
+
+	<div data-role="page" 
+		id="showphoto">
+		<div data-role="header"
+			data-position="fixed"
+			data-theme="a">
+			<a href="#photos"
+				data-transition="fade"
+				data-icon="back"
+				data-iconpos="notext"
+				>Photos</a>
+			<h1>Photos</h1>
+		</div><!-- header -->
+		<div data-role="content">
+			<div id="myphoto"></div>
+		</div><!-- content -->
+	</div><!-- page -->
+        
+        <script src="http://api.flickr.com/services/feeds/photos_public.gne?id=73845487@N00&format=json&tags=viewsource" type="text/javascript"></script>
+
     </body>
 </html>

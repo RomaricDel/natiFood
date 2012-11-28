@@ -1,16 +1,18 @@
 <!DOCTYPE html> 
 <html> 
+<head>
     <title>NatiFood</title> 
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery.mobile-1.2.0.min.js"></script>
     <script src="js/feed_news.js"></script>
+    <script src="js/myscript.js"></script>
 </head> 
 <body> 
-    
+
     <!-- ################# Main Page ##################### -->
-    
+
     <div id="home" data-role="page">
         <div data-role="header">
             <h1>NatiFood</h1>
@@ -75,11 +77,11 @@
                class="ui-btn-left"
                >Back</a>
         </div>
-        
+
         <div data-role="collapsible-set"
              id="newslist">
         </div>
-        
+
         <div data-role="footer"
              data-position="fixed"
              data-id="vs_footer">
@@ -122,6 +124,73 @@
             <div id="mypost"></div>
         </div><!-- content -->
     </div>
+
+    <!-- ################# Photos ##################### -->
+
+    <!-- Page: Photos -->
+    <div id="photos"
+         data-role="page"
+         data-title="Photos">
+        <div data-role="header">
+            <h1>Photos</h1>
+            <a href="#home"
+               data-icon="back"
+               data-iconpos="notext"
+               class="ui-btn-left"
+               >Back</a>
+        </div>
+
+        <div data-role="content">
+            <div class="ui-grid-c" id="photolist">
+            </div><!-- grid -->
+        </div><!-- content -->
+
+        <div data-role="footer"
+             data-position="fixed"
+             data-id="vs_footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#news" 
+                           data-role="button"
+                           data-icon="star"
+                           >Photos</a></li>
+                    <li><a href="#farmers" 
+                           data-role="button"
+                           data-icon="star"
+                           >Farmers</a></li>
+                    <li><a href="#food" 
+                           data-role="button"
+                           data-icon="star"
+                           >Food</a></li>
+                    <li><a href="#videos" 
+                           data-role="button"
+                           data-icon="star"
+                           >Videos</a></li>
+                </ul>
+            </div><!-- navbar -->
+        </div>
+    </div><!-- page -->
+
+    <div data-role="page" 
+         id="showphoto">
+        <div data-role="header"
+             data-position="fixed">
+            <a href="#photos"
+               data-transition="fade"
+               data-icon="back"
+               data-iconpos="notext"
+               >Photos</a>
+            <h1>Photos</h1>
+        </div><!-- header -->
+        <div data-role="content">
+            <div id="myphoto"></div>
+        </div><!-- content -->
+    </div><!-- page -->
+
+    <!-- ################# External Scripts ##################### -->
+
     <script src="http://www.nplancher.info/natifood/blog?json=recentstories&callback=listPosts" type="text/javascript"></script>
+    <script src="http://api.flickr.com/services/feeds/photos_public.gne?id=73845487@N00&format=json&tags=viewsource" type="text/javascript"></script>
+
 </body>
 </html>
