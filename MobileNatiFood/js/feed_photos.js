@@ -15,7 +15,9 @@ function jsonFlickrFeed(data) {
 		output += '<img src="' + link + '_q.jpg" alt="' + title + '" />';
 		output += '</a>';
 		output += '</div>';
+                
 	} // go through each photo
+        
 	$('#photolist').html(output);
 } //jsonFlickrFeed
 

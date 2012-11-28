@@ -1,6 +1,7 @@
 <!DOCTYPE html> 
 <html>
     <head>
+
         <title>NatiFood</title> 
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
@@ -11,9 +12,11 @@
         <script src="js/jquery-1.8.3.min.js"></script>
         <script src="js/jquery.mobile-1.2.0.min.js"></script>
         <script src="js/feed_news.js"></script>
+        <script src="js/feed_photos.js"></script>
         <script src="js/feed_videos.js"></script>
-        <script src="js/myscript.js"></script>
+
     </head> 
+
     <body> 
 
         <!-- ################# Main Page ##################### -->
@@ -114,6 +117,21 @@
 
         </div>
 
+        <div id="blogpost"
+             data-role="page">
+            <div data-role="header"
+                 data-position="fixed"
+                 data-theme="a">
+                <a href="#news"
+                   data-icon="back"
+                   data-iconpos="notext"
+                   data-direction="reverse">Videos</a>
+                <h1>Post</h1>
+            </div><!-- header-->
+            <div data-role="content">
+                <div id="mypost"></div>
+            </div><!-- content -->
+        </div>       
 
         <!-- ################# Farmers ##################### -->
 
@@ -170,9 +188,8 @@
 
         </div>    
 
-        <!-- ################################################ -->
-
         <!-- ################### Dublin ####################### -->
+
         <div id="dublin" data-role="page">
 
             <div data-role="header">
@@ -245,10 +262,10 @@
             </div>
 
         </div>    
-        <!-- ################################################ -->
-
 
         <!-- ##################Malahide#################### -->
+
+
         <div id="malahide" data-role="page">
 
             <div data-role="header">
@@ -313,10 +330,8 @@
 
         </div>    
 
-        <!-- ################################################ -->
-
-
         <!-- ##################Balbriggan###################### -->
+
         <div id="balbriggan" data-role="page">
 
             <div data-role="header">
@@ -390,9 +405,6 @@
 
         </div>    
 
-        <!-- ################################################ -->
-
-
         <!-- #####################Food####################### -->
 
         <div id="food" data-role="page">
@@ -448,12 +460,8 @@
 
         </div>    
 
-
-        <!-- ################################################ -->
-
-
-
         <!-- ####################Meat######################## -->
+
         <div id="meat" data-role="page">
 
             <div data-role="header">
@@ -540,11 +548,9 @@
 
         </div>    
 
-        <!-- ################################################ -->
-
-
 
         <!-- ###################Fruits####################### -->
+
         <div id="fruits" data-role="page">
 
             <div data-role="header">
@@ -628,10 +634,9 @@
 
         </div>    
 
-        <!-- ################################################ -->
-
 
         <!-- ####################Vegetables################## -->
+
         <div id="vegetables" data-role="page">
 
             <div data-role="header">
@@ -717,11 +722,10 @@
             </div>
 
         </div>    
-        <!-- ################################################ -->
-
 
 
         <!-- ##################Infos Farmers################# -->
+
         <div data-role="page" id="info-Patrick">
             <!-- Informations about Patrick O'donell in a pop up window-->
 
@@ -934,91 +938,7 @@
                 </table>
             </div>
         </div>    
-        <!-- ################################################ -->
 
-        <div id="blogpost"
-             data-role="page">
-            <div data-role="header"
-                 data-position="fixed"
-                 data-theme="a">
-                <a href="#news"
-                   data-icon="back"
-                   data-iconpos="notext"
-                   data-direction="reverse">Videos</a>
-                <h1>Post</h1>
-            </div><!-- header-->
-            <div data-role="content">
-                <div id="mypost"></div>
-            </div><!-- content -->
-        </div>
-
-        <!-- ################# Videos ##################### -->
-         <div id="videos" data-role="page">
-             <div data-role="header">
-                <h1>Videos</h1>
-                <a href="#home"
-                   data-icon="back"
-                   data-iconpos="notext"
-                   class="ui-btn-left"
-                   >Back</a>
-            </div>
-            <div data-role="content">
-              	<div data-role="content">
-                    <div class="ui-grid-a" id="videolist">
-                    </div><!-- grid -->
-                </div>  
-            </div>
-            <div data-role="footer"
-                 data-position="fixed"
-                 data-id="vs_footer">
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="#news" 
-                               data-role="button"
-                               data-icon="star"
-                               >News</a></li>
-                        <li><a href="#farmers" 
-                               data-role="button"
-                               data-icon="star"
-                               >Farmers</a></li>
-                        <li><a href="#food" 
-                               data-role="button"
-                               data-icon="star"
-                               >Food</a></li>
-                        <li><a href="#photos" 
-                               data-role="button"
-                               data-icon="star"
-                               >Photos</a></li>
-                    </ul>
-                </div><!-- navbar -->
-            </div>            
-        </div>
-
-	<div id="videoplayer"
-		data-role="page">
-		<div data-role="header"
-			data-position="fixed"
-			data-theme="a">
-			<a href="#videos"
-				data-transition="fade"
-				data-icon="back"
-				data-iconpos="notext"
-				data-direction="reverse"
-				>Back</a>
-                        <a href="#home"
-                                data-icon="home"
-                                data-iconpos="notext"
-                                class="ui-btn-right"
-                                >Home</a>
-			<h1>Videos</h1>
-		</div>
-		<div data-role="content">
-			<div id="myplayer"></div>
-		</div><!-- content -->
-	</div>
-        <!-- ############################################## -->
-        
-        
         <!-- ################# Photos ##################### -->
 
         <!-- Page: Photos -->
@@ -1081,10 +1001,77 @@
             </div><!-- content -->
         </div><!-- page -->
 
+
+        <!-- ################# Videos ##################### -->
+        
+        <div id="videos" data-role="page">
+            <div data-role="header">
+                <h1>Videos</h1>
+                <a href="#home"
+                   data-icon="back"
+                   data-iconpos="notext"
+                   class="ui-btn-left"
+                   >Back</a>
+            </div>
+            <div data-role="content">
+                <div data-role="content">
+                    <div class="ui-grid-a" id="videolist">
+                    </div><!-- grid -->
+                </div>  
+            </div>
+            <div data-role="footer"
+                 data-position="fixed"
+                 data-id="vs_footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#news" 
+                               data-role="button"
+                               data-icon="star"
+                               >News</a></li>
+                        <li><a href="#farmers" 
+                               data-role="button"
+                               data-icon="star"
+                               >Farmers</a></li>
+                        <li><a href="#food" 
+                               data-role="button"
+                               data-icon="star"
+                               >Food</a></li>
+                        <li><a href="#photos" 
+                               data-role="button"
+                               data-icon="star"
+                               >Photos</a></li>
+                    </ul>
+                </div><!-- navbar -->
+            </div>            
+        </div>
+
+        <div id="videoplayer"
+             data-role="page">
+            <div data-role="header"
+                 data-position="fixed"
+                 data-theme="a">
+                <a href="#videos"
+                   data-transition="fade"
+                   data-icon="back"
+                   data-iconpos="notext"
+                   data-direction="reverse"
+                   >Back</a>
+                <a href="#home"
+                   data-icon="home"
+                   data-iconpos="notext"
+                   class="ui-btn-right"
+                   >Home</a>
+                <h1>Videos</h1>
+            </div>
+            <div data-role="content">
+                <div id="myplayer"></div>
+            </div><!-- content -->
+        </div>
+
         <!-- ################# External Scripts ##################### -->
 
         <script src="http://www.nplancher.info/natifood/blog?json=recentstories&callback=listPosts" type="text/javascript"></script>
-        <script src="http://api.flickr.com/services/feeds/photos_public.gne?id=73845487@N00&format=json&tags=viewsource" type="text/javascript"></script>
+        <script src="http://api.flickr.com/services/feeds/photos_public.gne?id=90564280@N03&format=json" type="text/javascript"></script>
         <script src="http://gdata.youtube.com/feeds/users/FarmerBoyDiner/uploads?alt=json-in-script&max-results=30&callback=listVideos&orderby=viewCount" type="text/javascript"></script>
     </body>
 </html>
