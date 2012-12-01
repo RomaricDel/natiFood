@@ -25,6 +25,10 @@ body {
 	width: 90%;
 }
 
+.ui-icon-map {
+	background-image: url("images/icon_map.png");
+}
+
 .ui-icon-news {
 	background-image: url("images/icon_news.png");
 }
