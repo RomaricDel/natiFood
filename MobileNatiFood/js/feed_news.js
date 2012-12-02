@@ -9,7 +9,7 @@ function listPosts(data) {
                 
         output +='<div data-role="collapsible">';
         output+='<h3>' + val.title + '</h3>';
-        output+='<p><a style="color : inherit; text-decoration:none" href="#blogpost" onclick="showPost(' + val.id + ')">' + val.excerpt + '</a></p>';
+        output+='<p><a style="color : inherit; text-decoration:none; font-weight : inherit" href="#blogpost" onclick="showPost(' + val.id + ')">' + val.excerpt + '</a></p>';
         output+='</div>';
     }); // go through each post
 	
