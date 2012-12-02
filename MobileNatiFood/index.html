@@ -5,9 +5,9 @@
         <title>NatiFood</title> 
 
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        
+
         <link rel="stylesheet" href="css/jquery.mobile.structure-1.2.0.css" />
-        
+
         <script src="js/jquery-1.8.3.min.js"></script>
         <script src="js/jquery.mobile-1.2.0.min.js"></script>
         <script src="js/feed_news.js"></script>
@@ -21,7 +21,7 @@
 
 
 
-        
+
 
     </head> 
 
@@ -146,10 +146,16 @@
             <div data-role="header"
                  data-position="fixed"
                  data-theme="a">
-                <a href="#news"
+                <a onClick="javascript: history.go(-1)"
                    data-icon="back"
                    data-iconpos="notext"
-                   data-direction="reverse">Videos</a>
+                   class="ui-btn-left"
+                   >Back</a>
+                <a href="#home"
+                   data-icon="home"
+                   data-iconpos="notext"
+                   class="ui-btn-right"
+                   >Home</a>
                 <h1>Post</h1>
             </div><!-- header-->
             <div data-role="content">
@@ -1259,7 +1265,10 @@
             </div>
             <div data-role="content">
                 <div data-role="content">
-                    <div id="googleMap" style="width : 100%; height : 300px"></div>	
+                    <input id="input_directions" type="text" name="name" value="Type your address"  onClick="this.value=''" onChange="calcRoute()"/>
+                    <div id="googleMap" style="width : 100%; height : 300px"></div>
+                    <a id="button_directions" data-role="button" data-icon="map" data-mini="true" data-iconpos="right" onClick="showDirections()"><p>Show directions</p></a>
+                    <div id="direction_panel"></div>
                 </div>  
             </div>
             <div data-role="footer"
@@ -1298,10 +1307,10 @@
         <script src="http://www.nplancher.info/natifood/blog?json=recentstories&callback=listPosts" type="text/javascript"></script>
         <script src="http://api.flickr.com/services/feeds/photos_public.gne?id=90564280@N03&format=json" type="text/javascript"></script>
         <script src="http://gdata.youtube.com/feeds/users/FarmerBoyDiner/uploads?alt=json-in-script&max-results=30&callback=listVideos&orderby=viewCount" type="text/javascript"></script>
-    
-            <!-- Maps -->
+
+        <!-- Maps -->
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDzK5rlI0t_zciVAu5Gn9lfuV0M9lThX9s&sensor=false"></script>
         <script type="text/javascript" src="js/maps.js"></script>
-    
+
     </body>
 </html>
