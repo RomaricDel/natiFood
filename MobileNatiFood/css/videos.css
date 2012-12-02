@@ -6,9 +6,11 @@
 	min-height: 50%;
 }
 #videolist h3 {
-	margin: 15px 0 5px 0;
+        text-align: center;
+	margin: 15px 10px 5px 0;
 	height: 35px;
 	overflow: hidden;
 	font-size: 1em;
+        width:90%;
 }
 
